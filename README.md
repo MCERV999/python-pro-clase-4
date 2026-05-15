@@ -1,2 +1,24 @@
 # python-pro-clase-4
 python tarea
+import discord
+from discord.ext import commands
+permisos = discord.Intents.default()
+permisos.message_content = True
+bot999 = commands.Bot(command_prefix="/", intents=permisos)
+@bot999.event
+async def on_ready():
+    print("bot en linea / bot online / bot en ligne / 線上機器人 / 在线机器人")
+@bot999.command()
+async def hola(ctx):
+    await ctx.send("hola , mucho gusto")
+@bot999.command()
+async def nombre(ctx):
+    await ctx.send("mi nombre es bot999")
+@bot999.command()
+async def funciones(ctx):
+    await ctx.send("(CR7 es el mejor siuuuu)mis funciones son hacer de este chat un lugar mejr para convivir, soy admin del server, gracias por preguntar")
+@bot999.command()
+async def secreto502(ctx):
+    await ctx.send("Los agujeros negros se crean principalmente cuando estrellas muy masivas (más de 10-20 veces la masa del Sol) agotan su combustible al final de sus vidas y colapsan bajo su propia gravedad. Este colapso es tan intenso que comprime la materia del núcleo en una singularidad, formando una región con una fuerza gravitatoria de la que nada, ni siquiera la luz, puede escapar.")
+
+bot999.run(
